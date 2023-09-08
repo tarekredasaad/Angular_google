@@ -1,0 +1,58 @@
+/Dubbizel_Angular/.vscode
+/Dubbizel_Angular/node_modules
+# Compiled output
+/Dubbizel_Angular/dist
+/Dubbizel_Angular/tmp
+/Dubbizel_Angular/out-tsc
+/Dubbizel_Angular/bazel-out
+
+
+# Node
+/Dubbizel_Angular/node_modules
+/Dubbizel_Angular/npm-debug.log
+/Dubbizel_Angular/yarn-error.log
+
+# IDEs and editors
+/Dubbizel_Angular/.idea/
+/Dubbizel_Angular/.project
+/Dubbizel_Angular/.classpath
+/Dubbizel_Angular/.c9/
+/Dubbizel_Angular/*.launch
+/Dubbizel_Angular/.settings/
+/Dubbizel_Angular/*.sublime-workspace
+
+# Visual Studio Code
+/Dubbizel_Angular/.vscode/*
+/Dubbizel_Angular/!.vscode/settings.json
+/Dubbizel_Angular/!.vscode/tasks.json
+/Dubbizel_Angular/!.vscode/launch.json
+/Dubbizel_Angular/!.vscode/extensions.json
+/Dubbizel_Angular/.history/*
+
+# Miscellaneous
+/Dubbizel_Angular/.angular/cache
+/Dubbizel_Angular/.sass-cache/
+/Dubbizel_Angular/connect.lock
+/Dubbizel_Angular/coverage
+/Dubbizel_Angular/libpeerconnection.log
+/Dubbizel_Angular/testem.log
+/Dubbizel_Angular/typings
+
+# System files
+/Dubbizel_Angular/.DS_Store
+/Dubbizel_Angular/Thumbs.db
+/Dubbizle/.vs
+/Dubbizle/Dubbizle.API/bin/Debug/net7.0
+/Dubbizle/Dubbizle.API/obj
+/Dubbizle/Dubbizle.API/appsettings.json
+/Dubbizle/Dubbizle.API/appsettings.Development.json
+/Dubbizle/Dubbizle.Data/bin/Debug/net7.0
+/Dubbizle/Dubbizle.Data/Migrations
+/Dubbizle/Dubbizle.Data/obj
+/Dubbizle/Dubbizle.DTOs/bin/Debug/net7.0
+/Dubbizle/Dubbizle.DTOs/obj
+/Dubbizle/Dubbizle.Models/bin/Debug/net7.0
+/Dubbizle/Dubbizle.Models/obj
+/Dubbizle/Dubbizle.Services/bin/Debug/net7.0
+/Dubbizle/Dubbizle.Services/obj
+node_modules

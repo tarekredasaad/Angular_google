@@ -1,0 +1,138 @@
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title">Login</h1>
+        ...
+        <!-- <form [formGroup]="loginForm" autocomplete="off" novalidate (ngSubmit)="loginUser(loginForm.value)">
+            ...
+        </form> -->
+        <hr>
+        <div>
+            <!-- <div *ngIf="user">
+                <img [src]="user.photoUrl" [alt]="user.name" width="50" height="50">
+                <span>{{ user.name }}</span>
+                <button (click)="signOut()">Sign out</button>
+              </div>
+              <div *ngIf="!user">
+                <asl-google-signin-button >
+                    Sign in with Google
+                     <button (click)="signInWithGoogle()">Sign in with Google</button> 
+                </asl-google-signin-button>
+                <div class="g-signin2" (click)="onSignIn()" data-onsuccess="onSignIn"></div>
+
+              </div> -->
+              <button (click)="onSignIn()">Sign in with Google</button>
+
+              <div *ngIf="user">
+                <img [src]="user.photoUrl" [alt]="user.name" width="50" height="50">
+                <span>{{ user.name }}</span>
+                <button (click)="signOut()">Sign out</button>
+              </div>
+              <div *ngIf="!user">
+                <button class="btn btn-info" type="button" (click)="onSignIn()">Google</button>
+
+                <div class="g-signin2" (click)="onSignIn2()" data-onsuccess="onSignIn">sign in</div>
+
+                <!-- <div #googleSignInButton 
+                ></div> -->
+              </div>
+              
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+
+  <h1>Google Login with Angular - ItSolutionStuff.com</h1>
+
+  <div class="row mt-5">
+
+    <div class="col-md-4 mt-2 m-auto ">
+
+        <button class="btn btn-danger" #loginRef>
+
+            Login with Google
+
+          </button>
+
+    </div>    
+
+  </div>
+
+</div>
+<!-- data-login_uri="http://localhost:7189/api/Account/PostUser"  -->
+<!-- data-login_uri="http://localhost:4200" -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<!-- <div id="g_id_onload"
+data-client_id='400690855047-gkqnu3ioohb9vbc0pevpoa5h5eis6oc6.apps.googleusercontent.com'
+   data-auto_prompt="false">
+</div> -->
+<div class="g_id_signin"
+   data-type="standard"
+   data-size="large"
+   data-theme="outline"
+   data-text="sign_in_with goooogle"
+   data-shape="rectangular"
+   data-callback="OnSuccess"
+   data-logo_alignment="left">
+</div>
+ <div id="g_id_onload"
+     data-client_id="400690855047-gkqnu3ioohb9vbc0pevpoa5h5eis6oc6.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="redirect"
+     data-login_uri="http://localhost:7189/api/Account/ExternalLogin"
+     data-auto_select="true"
+     data-auto_prompt="false"
+     data-itp_support="true">
+</div>
+<!--
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="pill"
+     data-theme="outline"
+     data-text="signin_with"
+     data-size="large"
+     data-logo_alignment="left">
+</div> -->
+
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+<script>
+  function OnSuccess(){
+    console.log("OnSuccess")
+  }
+  function handleCredentialResponse(response) {
+    console.log("Encoded JWT ID token: " + response.credential);
+  }
+  window.onload = function () {
+    google.accounts.id.initialize({
+      client_id: '400690855047-gkqnu3ioohb9vbc0pevpoa5h5eis6oc6.apps.googleusercontent.com',
+      callback: handleCredentialResponse
+    });
+    google.accounts.id.renderButton(
+      document.getElementById("buttonDiv"),
+      { theme: "outline", size: "large" }  // customization attributes
+    );
+    google.accounts.id.prompt(); // also display the One Tap dialog
+  }
+</script>
+<div id="buttonDiv"></div> 
+
+
+<script src="https://accounts.google.com/gsi/client?hl=fr" async defer></script>
+...
+<div class="g_id_signin"
+  data-locale="fr">
+</div>
+<!-- <script src="https://accounts.google.com/gsi/client?hl=fr" async defer></script> -->
+...
+<!-- <script>
+google.accounts.id.renderButton(
+  document.getElementById("buttonDiv"),                
+  { locale: "fr" }
+);
+</script> -->
+<script>
+google.accounts.id.renderButton(
+  document.getElementById("buttonDiv"),                
+  { locale: "fr" }
+);
+</script>
